@@ -29,8 +29,8 @@ class CardGameWarSpec extends WordSpec with Matchers {
   }
   "playGame" when {
     "the player loses when they run out of cards" in {
-      // TODO: Implement Working Test. This will pass if they return true regardless of who actually wins
-      assert(playGame(Player("Bob", createDeck), Player("Alice", createDeck)).isInstanceOf[String])
+      val (deck1, deck2) = createDecks
+      assert(playGame(Player("Bob", deck1), Player("Alice", deck2)).isInstanceOf[String])
     }
 
   }
